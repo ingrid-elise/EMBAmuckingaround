@@ -1,0 +1,57 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.slides {
+  display: flex;
+  width: 65%;
+  height: 600px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  /* border: red 1px solid; */
+}
+
+img {
+  height: 600px;
+  width: auto;
+  /* border: yellow 1px solid; */
+}
+
+.slides > div {
+  display: flex;
+  flex-shrink: 0;
+  height: 600px;
+  width: auto;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  /* border: pink 1px solid; */
+  /* background: #74abe2; */
+}
+
+@media (max-width: 700px) {
+  .slides {
+    height: 280px;
+    width: 100%;
+  }
+
+  img {
+    height: 280px;
+    width: auto;
+  }
+
+  .slides > div {
+    height: 280px;
+    width: auto;
+  }
+}
+
+@media (max-width: 1100px) {
+  .slides {
+    width: 100%;
+  }
+}
