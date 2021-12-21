@@ -9,7 +9,7 @@ import Treehouse6 from "./TreehouseImages/Treehouse6.jpg";
 function Slider() {
   return (
     <div className="App">
-      <div class="slides">
+      <div className="slides">
         <div>
           <img src={Treehouse1} alt="Treehouse1" />
         </div>

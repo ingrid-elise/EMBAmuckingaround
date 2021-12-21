@@ -1,39 +1,28 @@
 import React, { useState } from "react";
 import "./Header.css";
+import MenuButton from "./MenuButton";
+import Menu from "./Menu";
+
 
 function Header() {
   const [checked, setChecked] = useState(false);
 
-  const handleChange = (event) => {
-    let checked = event.target.checked;
+  const handleMouseDown = (e) => {
+    toggleMenu();
+
+    console.log("clicked");
+  }
+
+  const toggleMenu = () => {
     setChecked(!checked);
+    console.log("checked")
   };
 
   return (
     <div className="banner-area">
-      <label for="nav" className="nav-btn">
-        <span>
-          <i className="nav-three-bars">nav bars</i>
-          <input type="checkbox" />
-        </span>
-      </label>
-      <input type="checkbox" checked={checked} onChange={handleChange} id="" />
-      <div className="nav-overlay">
-        <ul>
-          <li>
-            <p>Home</p>
-          </li>
-          <li>
-            <p>Home</p>
-          </li>
-          <li>
-            <p>Home</p>
-          </li>
-          <li>
-            <p>Home</p>
-          </li>
-        </ul>
-      </div>
+      <MenuButton handleMouseDown={handleMouseDown}/>
+      <Menu handleMouseDown={handleMouseDown} menuVisibility={checked}
+      />
     </div>
   );
 }
