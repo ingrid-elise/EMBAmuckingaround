@@ -11,6 +11,7 @@ function Header() {
     toggleMenu();
 
     console.log("clicked");
+    e.stopPropagation();
   }
 
   const toggleMenu = () => {
@@ -20,8 +21,12 @@ function Header() {
 
   return (
     <div className="banner-area">
-      <MenuButton handleMouseDown={handleMouseDown}/>
-      <Menu handleMouseDown={handleMouseDown} menuVisibility={checked}
+      <MenuButton 
+      handleMouseDown={handleMouseDown}
+      />
+      <Menu 
+      handleMouseDown={handleMouseDown}
+      menuVisibility={checked}
       />
     </div>
   );

@@ -1,7 +1,7 @@
 #flyoutMenu {
     width: 100vw;
     height: 100vh;
-    background-color: #FFE600;
+    background-color: black;
     position: fixed;
     top: 0;
     left: 0;
@@ -22,11 +22,16 @@
   }
    
   #flyoutMenu h2 a {
-    color: #333;
+    color: white;
     margin-left: 15px;
     text-decoration: none;
   }
    
   #flyoutMenu h2 a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    color: rgb(122, 121, 121);
+  }
+
+  .menuCloseBtn {
+    color: white;
   }
